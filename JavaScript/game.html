@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<!-- File: game.html
+Creation: 2023-03-20
+-->
+<head>
+ <title>Ebitimi Imomotebegha</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ebitimi Imomotebegha">
+    <meta name="description" content="Simple Game of Chance Using Dice">
+    <meta name="Keywords" content="Dice, Game , Setup, Play, End">
+    <link rel="stylesheet" href="game.css">
+</head>
+   <body>
+	<header> <h1>GAME OF DICE</h1> </header>
+		<main>
+	
+	<!--Div container for the game-->
+		<div class="box">
+		<!--Setup Stage-->
+			<div id="setup">
+				<h2>Setup Stage: Get Ready!</h2>
+				<p>Please enter a natural number (between 3 and 6):</p>
+				<input type="text" id="numDiceInput"> <!--input field for user to enter number of dice-->
+				<button onclick="setupGame()">Start Game</button> <!--button to start game and call setupGame() function-->
+				<p id="errorMsg"></p>  <!--error message container-->
+			</div>
+			
+			<!--Play Stage (hidden by default untill setup stage is passed succesfully)-->
+			<div id="play" style="display:none;">
+				<h2>Play Stage: Let's Roll!</h2>
+				<h2>Round <span id="roundNum"></span></h2>
+				<div id="dice"></div> <!--container for displaying dice-->
+				
+				<p id="pointsWon"></p> <!--points won in current round-->
+				<p id="balance"></p> <!--total points earned so far-->
+				<button onclick="playRound()">Roll Dice</button> <!--button to roll the dice and call playRound() function-->
+				<button onclick="endGame()">End Game</button><!--button to end game and call endGame() function-->
+			</div>
+			
+			<!--End Stage (hidden by default until clicked by user)-->
+			<div id="end" style="display:none;">
+				<h2>End Stage: Game Over</h2>
+				<p>Number of rounds played: <span id="numRounds"></span></p> <!--total number of rounds played-->
+				<p>Balance of points: <span id="totalPoints"></span></p> <!--total points earned-->
+				<p>Average points per round: <span id="avgPoints"></span></p> <!--average points earned per round-->
+				<button onclick="playAgain()">Play Again</button> <!--button to play again and call playAgain() function-->
+					 <canvas id="graph" width="600" height="500"></canvas> <!--canvas for displaying graph of points, this is a Bar Graph-->
+				</div>
+			
+		</div>
+		         <div>
+                  <p class="instruction-head">Game Instructions</p>
+        <div class="instruction-content">
+            <p>Here are the instructions for the game:</p>
+            <ol style="list-style-type: none;">
+                <li>Step 1: The Setup Stage<br> Enter the number of dice (between 3 and 6)</li>
+                <br>
+              <li>Step 2: The play Stage<br>Click on Roll Dice and Let's Roll!</li>
+           <br>     <li>Step 3: The End Stage<br> Shows final results (rounds played, points ,average points of rounds ).</li>
+
+            <p>Here is how the points works: </p> 
+              <ul>
+  <li>When all of the dice have the same value, the points earned are 60 plus the total value of all the dice.</li>
+  <li>If all but one of the dice have the same value, the points earned are 40 plus the total value of all the dice.</li>
+  <li>When the dice form a sequence (such as 1-2-3 or 4-5-6), the points earned are 20 plus the total value of all the dice.</li>
+  <li>If the dice do not form a sequence and do not all have the same value, the points earned are equal to the sum of the values of all the dice.</li>
+  <li>Any other outcome results in zero points being earned.</li>
+</ul>     
+            </ol>
+        </div>
+    </div>
+	<script src="game.js"></script>
+</main>
+	<footer>
+		<p>Ebitimi Imomotebegha. All rights reserved.</p>
+	</footer>
+</body>
+</html>

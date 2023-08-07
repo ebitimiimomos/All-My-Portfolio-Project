@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <title>Ebitimi Imomotebegha</title>
+  <link rel="stylesheet" href="interface.css" title="interface">
+</head>
+<body>
+  <header>
+    <h1>WEB INTERFACE FOR SPORT MANAGEMENT SERVICE</h1>
+  </header>
+
+ <!-- Content section of the web interface -->
+<div id="content">
+
+  <!-- HTTP method selection -->
+  <h3>HTTP Method:</h3>
+  <select name="method" id="method" onchange="RequestMethod(this.value); displayRequestBody(); updateDatalistOptions();">
+    <option value="None">Choose a Method</option>
+    <option value="GET">GET</option>
+    <option value="POST">POST</option>
+    <option value="PUT">PUT</option>
+    <option value="DELETE">DELETE</option>
+  </select>
+  <br>
+
+  <!-- Container for the resource field -->
+  <div id="resourceField">
+    <h3>Resource:</h3>
+
+    <!-- Text input field for entering the resource URL-->
+    <input type="text" name="resource" id="resource" list="resources" size="80" onchange="setResourceURL(this.value)"
+      placeholder="Please Input Resource Here">
+
+    <!-- Datalist element to store options for the resource URL -->
+    <datalist id="resources"></datalist>
+    <br>
+  </div>
+
+  <!-- Container for the request body field -->
+  <div id="requestBody">
+    <h3>Request Body:</h3>
+
+    <!-- Textarea field for entering the request body -->
+    <textarea name="requestBody" id="requestBody" cols="80" rows="5" onchange="setRequestBody(this.value)"
+      placeholder="Please enter Request Body in JSON Format Here, examples are in the resource list"></textarea>
+    <br>
+  </div>
+
+  
+
+<!-- Button for sending the HTTP request -->
+  <button type="submit" onclick="retrieveResponse()">Send Request</button>
+
+<!-- Container for displaying the selected HTTP method, Resource, RequestBody -->
+  <div id="httpMethod"></div>
+  <div id="httpResource"></div>
+  <div id="httpRequestBody"></div>
+
+  <!-- Container for displaying the HTTP response -->
+  <div id="HTTPResponse">
+    
+    <!-- Container for displaying the HTTP status code  -->
+    <div id="statusCode"></div>
+
+    <!-- Container for displaying the response body -->
+    <div id="responseBody"></div>
+    
+  </div>
+
+  <!-- Button for clearing the HTTP response -->
+  <button onclick="clearResponse()">Clear All Fields</button>
+</div>
+
+<!-- Separate box for list of resources and examples -->
+    <div id="resourceList" class="toggle-content">
+      <h3>Resources:</h3>
+      <ul>
+        <li>GET Teams: <br> <code></code></li>
+        <br>
+        <li>GET Players for a Team (replace &lt;ID&gt; with team ID):<br> <code></code></li>
+        <br>
+        <li>GET Specific Player (replace &lt;ID&gt; with player ID): <br><code></code></li>
+        <br>
+        <li>POST Player(replace value after ':' with player to be added details): <code></code></li>
+        <code>
+{
+  "team_id": 25,
+  "surname": "Cohen",
+  "given_names": "Harold",
+  "nationality": "Tazania",
+  "date_of_birth": "1990-05-15"
+}
+        </code>
+        <br>
+        <br>
+        <li>PUT Player (replace value after ':' with player details to be updated details):<br><code></code></li>
+        <code>
+{
+  "team_id": 3,
+  "player_id": 23,
+  "surname": "cohennew",
+  "given_names": "Haroldnew",
+  "nationality": "Tanzanianew",
+  "date_of_birth": "1795-08-27"
+}
+        </code>
+        <br>
+        <br>
+        <li>DELETE Player(insert player Id within '' value after ':'):<br><code></code></li><br>
+        <code>
+{
+    "player_id" : ""
+}
+        </code>
+      </ul>
+    </div>
+    <!-- Button for toggling the visibility of the resource list -->
+    <button class="toggle-btn" onclick="toggleResourceList()">Click to View Resource List</button>
+    <!-- Link button to visit the web service (REST API) -->
+    <a href="" class="linkbutton">Click to visit Web Service (REST API)</a>
+<script src="interface.js"></script>
+</body>
+
+</html>
+
+
+
+

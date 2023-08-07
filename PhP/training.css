@@ -1,0 +1,145 @@
+/* default font family and size for the body */
+body {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  background: url("https://image.freepik.com/free-photo/blurred-background-students-studying_23-2147666437.jpg");
+  /* This image was gotten from the website above */
+  background-size: cover;
+  height: 100vh;
+
+}
+
+/* the header section of the webpage */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*  width and height of the logo */
+.logo {
+  width: 500px;
+  height: 500%;
+  display: block;
+  margin: auto;
+  padding: 30px;
+  position: relative;
+        left:0px;
+        bottom: 0px;
+
+}
+
+/* the heading element inside the header */
+.header h1 {
+  color: #021691;
+  font-size: 36px;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+/* the form element*/
+form {
+  width: 500px;
+  transform: translate(100%,%);
+  border: 3px solid #ccc;
+  padding: 30px;
+  border-radius: 20px; 
+  background-color: #FBEDE0;
+  
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* the form input */
+input[type="text"],
+select {
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* the error message text*/
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 20px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* the submit button */
+input[type="submit"], .button {
+  display: inline-block;
+  background-color: #021691;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-size: 20px
+}
+
+/* the submit button on hover */
+input[type="submit"]:hover, .button:hover {
+  background-color: #3e8e41;
+}
+
+
+/* the confirmation box */
+.confirmation-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 500px;
+  border: 3px solid #ccc;
+  padding: 30px;
+  border-radius: 20px; 
+  background-color: #F1D6E2;
+  text-align: center;
+  font-size: 20px;
+  font-color: black;
+}
+
+/* the title within the confirmation box */
+.confirmation-box .container h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
+  
+}
+
+/* the message within the confirmation box */
+.confirmation-box .container p {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+/* the button within the confirmation box */
+.confirmation-box .container .button {
+  display: inline-block;
+  background-color: #0066cc;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+/* the button on hover within the confirmation box */
+.confirmation-box .container .button:hover {
+  background-color: #0052a3;
+}

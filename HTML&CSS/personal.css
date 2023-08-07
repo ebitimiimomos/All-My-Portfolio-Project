@@ -1,0 +1,120 @@
+body {
+  background-image: url('https://images.rawpixel.com/image_600/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA2L3RwMjAxLXNhc2ktMjAteC5qcGc.jpg');
+}
+
+header {
+  background-image: url('https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: Black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button {
+  margin: 10px;
+  background-color: #8B5A2B;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #654321;
+}
+
+h2 {
+  text-align: center;
+  color: #FFEFD5;
+  background-color: #8B5A2B;
+}
+
+
+table th,
+table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+table td {
+  border-right: 1px solid black;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: left;
+  padding: 5px;
+}
+
+
+/*Skills Section */
+
+table,th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th,td {
+  padding: 5px;
+  text-align: left;
+}
+
+.skill-icon {
+  display: inline-block;
+  margin-right: 5px;
+  height: 20px;
+  width: 20px;
+}
+
+
+
+/*Hobbies, Interest and Achievement Section */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 300px;
+  height: 270px;
+  background-color: #F2F2F2;
+  border: 1px solid #DDDDDD;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 3px 3px 3px #CCCCCC;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+p {
+  margin-top: 0px;
+  font-size: 18px;
+}
+
+/*line above footer*/
+footer { 
+  border-top: 1px solid black;
+}

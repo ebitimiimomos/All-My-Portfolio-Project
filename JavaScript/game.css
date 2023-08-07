@@ -1,0 +1,149 @@
+/* Ebitimi Imomotebegha */
+/* 201678680 */
+
+/* Set font family and color for the whole document */
+body {
+  font-family: 'Bungee', cursive;
+  color: #333;
+  background-image: url("https://media.giphy.com/media/3oGRFlpAW4sIHA02NW/giphy.gif");
+  /* This image used was downloaded from the link above on wordpress */
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+/* Style the header */
+header {
+  color: white;
+  background-color: grey;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Bungee', cursive;
+  font-size: 22px;
+  border: 3px solid #ccc;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+/* Style the main content section */
+main {
+  padding: 40px;
+}
+
+.box {
+  border: 3px solid #ccc;
+  padding: 30px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px;
+  max-width: 1500px; 
+  max-height: 1000px; 
+  background-color: #FAEBD7;
+  box-sizing: border-box;
+  opacity: 95%;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+#numDiceInput {
+  width: 20%;
+  padding: 15px;
+  font-size: 20px;
+  border: 2px solid #ccc;
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+
+#dice {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #BBA78C;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.die {
+  width: 120px;
+  height: 120px;
+  margin: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 5px 8px 20px rgba(0, 0, 0, 0.4);
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+button {
+  padding: 10px 10px;
+  color: #black;
+  background-color: #BBA78C;
+  font-size: 15px;
+  border-radius: 20px; 
+  box-shadow: 1px 3px #50514F;
+  outline: none;
+  transition: .3s; 
+}
+
+button:hover, button:active {
+  background: #50514F;
+  transform: translateY(10px); 
+}
+
+
+#graph {
+  display: block;
+  margin: auto;
+  border-width: medium;
+  border: 1px solid black;
+  background-color: white;
+  padding: 50px;
+}
+
+/* Intruction */
+.instruction-head {
+  background-color: #FAEBD7;
+  border: 3px solid #ccc;
+  border-radius: 50px;
+  box-shadow: 0px 0px 10px #ccc;
+  font-family: 'Bungee', cursive;
+  font-size: 25px;
+  padding: 20px;
+  max-width: 300px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+
+.instruction-content {
+font-size: 20px;
+background-color: #FAEBD7;
+border: 3px solid #ccc;
+border-radius: 50px;
+box-shadow: 0px 0px 10px #ccc;
+padding: 30px;
+max-width: 1500px;
+margin-top: 20px;
+opacity: 95%;
+}
